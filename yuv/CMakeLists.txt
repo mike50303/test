@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project(yuv)
+find_package(OpenCV REQUIRED)
+set(CMAKE_CXX_STANDARD 11)
+link_directories(/home/mike/project/opencvtest/opencvforc/yuv/)
+add_executable(${PROJECT_NAME} test1.cpp perforval.cpp)
+target_link_libraries(${PROJECT_NAME} libyuv.so ${OpenCV_LIBS})
